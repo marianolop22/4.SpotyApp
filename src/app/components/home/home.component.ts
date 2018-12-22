@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor( private spotify:SpotifyService ) {
 
     this.spotify.getNewRealeses ().subscribe ( (response:any) => {
-      this.nuevasCanciones = response.albums.items;
+      this.nuevasCanciones = response;
     });
 
   }
